@@ -1,0 +1,108 @@
+.user-card-cont{
+    width: 100%;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0rem;
+    background-color: white;
+    box-shadow: 0 0 1.25rem rgb(108 118 134 / 10%);
+    transition: 0.5s;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.user-card-cont:hover{
+    background-color: #10182F;
+    color: white;
+}
+
+.user-img-cont{
+    width: 50% ;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.user-img-circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-img{
+    border-radius: 8px;
+    width: 100%;
+}
+
+.user-btn-cont{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+}
+
+.user-btn{
+    padding: 1rem 2rem;
+    background-color: #10182F;
+    color: white;
+    border-radius: 200px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.user-details-cont{
+    width: 100%;
+    padding: 1rem;
+}
+
+.user-full-name{
+    font-size: 24px;
+}
+
+.user-username{
+    color: #828590;
+    margin-bottom: 16px;
+}
+
+.user-email{
+    font-size: 16px;
+    margin: 6px 0px;
+}
+
+.user-dob{
+    font-size: 16px;
+    margin: 6px 0px;
+}
+
+.user-address{
+    font-size: 16px;
+    margin: 6px 0px;
+}
+
+.user-ph-no{
+    font-size: 16px;
+    margin: 6px 0px;
+}
+
+
+.extra-details{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    padding: 0rem 1rem;
+    width: 100%;
+}
+
+
+.user-gender{
+    text-transform: capitalize;
+}
