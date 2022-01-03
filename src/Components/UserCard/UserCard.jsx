@@ -27,7 +27,7 @@ export default function UserCard({gender,name,username,email,dob,address,phone,i
     },[])
 
     return (
-        <div className='user-card-cont'>
+        <div className='user-card-cont' data-aos="flip-up" data-aos-duration="1000">
             <div className="user-img-cont">
                 <div className="user-img-circle">
                     <img src={img} alt="" className="user-img" />
