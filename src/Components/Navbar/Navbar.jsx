@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Navbar.css";
 
-export default function Navbar({setSearchTerm}) {
+export default function Navbar({setSearchTerm,searchTerm}) {
     
     React.useEffect(()=>{
         window.addEventListener("scroll",function(){
@@ -26,7 +26,11 @@ export default function Navbar({setSearchTerm}) {
             <div className="container-medium">
                 <div className="navbar">
                     <div className="navbar-search">
-                        <input onChange={e=>setSearchTerm(e.target.value)} className='search-bar' placeholder='Search Username'/>
+                        <input onChange={e=>{
+                            if(/^[a-zA-Z]*$/.test(e.target.value)){
+                                setSearchTerm(e.target.value)
+                            }
+                            }} value={searchTerm} className='search-bar' placeholder='Search Username'/>
                     </div>
                     <div className="navbar-menu">
                         

@@ -58,7 +58,7 @@ function App() {
     <div className="App">
       <div className='container-large'>
         
-        <Navbar setSearchTerm={setSearchTerm}/>
+        <Navbar setSearchTerm={setSearchTerm} searchTerm={searchTerm}/>
         
         <div className='container-medium' style={{marginTop:'14vh'}}>
 
