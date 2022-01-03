@@ -106,3 +106,10 @@
 .user-gender{
     text-transform: capitalize;
 }
+
+@media (max-width:700px){
+    .user-card-cont:hover{
+        background-color: #ffffff;
+        color: black;
+    }
+}

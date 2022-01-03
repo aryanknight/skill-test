@@ -47,11 +47,11 @@ export default function UserCard({gender,name,username,email,dob,address,phone,i
                 
             </div>
             <div className="extra-details" id={username}>
-                <div className="user-gender">{gender}</div>
-                <div className="user-email">{email}</div>
-                <div className="user-dob">{DOB}</div>
-                <div className="user-address">{address}</div>
-                <div className="user-ph-no">{phone}</div>
+                <div className="user-gender"><b>Gender :</b> {gender}</div>
+                <div className="user-email"><b>Email :</b> {email}</div>
+                <div className="user-dob"><b>DOB :</b> {DOB}</div>
+                <div className="user-address"><b>Address :</b> {address}</div>
+                <div className="user-ph-no"><b>Phone No :</b> {phone}</div>
             </div>
         </div>
     )

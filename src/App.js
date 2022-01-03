@@ -84,7 +84,7 @@ function App() {
                   dob={user.dob.date}  
                   address={user.location.street.number+' , '+user.location.street.name+' , '+
                   user.location.city+' , '+user.location.country+' , '+user.location.postcode}  
-                  phone={user.phone}  
+                  phone={user.phone.replace(/[^0-9]+/g, "")}  
                   gender={user.gender}
                   img={user.picture.large}/>
               </div>
