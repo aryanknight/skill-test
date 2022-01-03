@@ -72,7 +72,7 @@ function App() {
                 return user;
               }
             }).map((user)=>(
-              <div className='user-card'>
+              <div className='user-card' data-aos="flip-up" data-aos-duration="1000">
                 <UserCard  name={user.name.title+' '+user.name.first+' '+user.name.last}  
                   username={user.login.username}
                   email={user.email} 

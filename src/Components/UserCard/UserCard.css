@@ -1,24 +1,26 @@
 .user-card-cont{
     width: 100%;
     border-radius: 5px;
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 1rem 0rem;
     background-color: white;
     box-shadow: 0 0 1.25rem rgb(108 118 134 / 10%);
+    transition: 0.5s;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 
-/* .user-card-cont:hover{
+.user-card-cont:hover{
     background-color: #10182F;
     color: white;
     transform: translateY(-10px);
-} */
+}
 
 .user-card-cont-1{
-    background-color: white;
+    /* background-color: white; */
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +32,7 @@
     transform: translateY(-10px);
 } */
 
-.user-card-cont::before{
+/* .user-card-cont::before{
     content: '';
     width: 100px;
     height: 100px;
@@ -43,7 +45,7 @@
 .user-card-cont:hover:before{
     animation: rotate 4s linear infinite;
     animation-delay: 0s;
-}
+} */
 
 @keyframes rotate{
     0%{
