@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserCard.css';
 
-export default function UserCard({gender,name,username,email,dob,address,phone,img}) {
+export default function UserCard({gender,name,username,email,dob,address,phone,img,setModalImg}) {
 
     const [btnState,setBtnState]=React.useState(true)
     
@@ -26,13 +26,20 @@ export default function UserCard({gender,name,username,email,dob,address,phone,i
         setDOB(dob[0]+'/'+dob[1]+'/'+dob[2]);
     },[])
 
+    const displayModal=(img)=>{
+        const ele=document.getElementById('modal');
+        const ele1=document.getElementById('modal-img');
+        ele.style.display='block';
+        setModalImg(img)
+    }
+
     return (
         <div className='user-card-cont' >
             {/* <div className="anim-box"></div>
             <div className="user-card-cont-1"> */}
                 <div className="user-img-cont">
                     <div className="user-img-circle">
-                        <img src={img} alt="" className="user-img" />
+                        <img src={img} alt="" className="user-img" onClick={e=>displayModal(img)} />
                     </div>
                 </div>
                 <div className="user-btn-cont">

@@ -13,6 +13,7 @@ function App() {
   let [currentPage, setCurrentPage] = React.useState(1);
   const [postsPerPage] = React.useState(10);
   const [searchTerm,setSearchTerm]=React.useState('');
+  const [modalImg,setModalImg]=React.useState('')
 
 
   const [userList,setUserList]=React.useState([]);
@@ -53,10 +54,21 @@ function App() {
     }
   }
 
+  const hideModal=(e)=>{
+    const ele=document.getElementById('modal');
+    if(e.target.id!='modal-img'){
+      ele.style.display='none';
+    }
+  }
+
 
   return (
     <div className="App">
       <div className='container-large'>
+
+        <div id='modal' onClick={e=>{hideModal(e)}}>
+          <img src={modalImg} id="modal-img"/>
+        </div>
         
         <Navbar setSearchTerm={setSearchTerm} searchTerm={searchTerm}/>
         
@@ -81,7 +93,8 @@ function App() {
                   user.location.city+' , '+user.location.country+' , '+user.location.postcode}  
                   phone={user.phone.replace(/[^0-9]+/g, "")}  
                   gender={user.gender}
-                  img={user.picture.large}/>
+                  img={user.picture.large}
+                  setModalImg={setModalImg} />
               </div>
             ))
           }
