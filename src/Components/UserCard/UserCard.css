@@ -16,6 +16,7 @@
 .user-card-cont:hover{
     background-color: #10182F;
     color: white;
+    transform: translateY(-10px);
 }
 
 .user-img-cont{
@@ -33,6 +34,7 @@
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
+    border: 4px solid rgb(255, 255, 255);
 }
 
 .user-img{

@@ -61,14 +61,9 @@ function App() {
         <Navbar setSearchTerm={setSearchTerm}/>
         
         <div className='container-medium' style={{marginTop:'14vh'}}>
-          <div className='pagination-cont'>
-              <ArrowBackIosIcon onClick={backwardPage} style={{cursor:'pointer'}}/>
-              <div className='page-no'>
-                {currentPage}
-              </div>
-              <ArrowForwardIosIcon onClick={forwardPage} style={{cursor:'pointer'}}/>
-          </div>
 
+          <div className='main-title'>Random users</div>
+          
           {
             currentPosts.filter((user)=>{
               if(searchTerm==""){
@@ -90,6 +85,14 @@ function App() {
               </div>
             ))
           }
+          <div className='pagination-cont'>
+              <ArrowBackIosIcon onClick={backwardPage} style={{cursor:'pointer'}}/>
+              <div className='page-no'>
+                {currentPage}
+              </div>
+              <ArrowForwardIosIcon onClick={forwardPage} style={{cursor:'pointer'}}/>
+          </div>
+
         </div>
       </div>
     </div>

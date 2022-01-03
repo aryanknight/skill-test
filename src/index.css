@@ -35,8 +35,12 @@
   text-align: center;
   font-size: 36px;
   font-weight: bold;
-  max-height: 12vh;
   position: relative;
+  background: -webkit-linear-gradient(#10182F, #3452ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
 /* .bar{
